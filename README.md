@@ -1,6 +1,9 @@
 # Kubernetes Playground
 
-https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+- https://kubectl.docs.kubernetes.io
+- https://docs.docker.com/docker-for-mac/kubernetes/
 
 ## Setup
 
@@ -23,6 +26,7 @@ Mostly based on https://kubernetes.io/docs/tutorials/kubernetes-basics/:
 
     # 1. Create a cluster (via Desktop Docker, Minikube, DigitalOcean)
     doctl account get
+    kubectl version
     kubectl config get-contexts
     kubectl config use-context docker-desktop # or kubectx
     # cluster details
@@ -110,6 +114,15 @@ Mostly based on https://kubernetes.io/docs/tutorials/kubernetes-basics/:
     kubectl rollout undo deployments/kubernetes-bootcamp
     kubectl get pods
     kubectl describe pods
+
+    # Cleanup
+    kubectl delete deployment,service kubernetes-bootcamp
+
+## Other helpful commands
+
+    kubectl get events
+    kubectl config view
+    kubectl port-forward hello-3015430129-g95j6 8080
 
 ## Definitions
 
